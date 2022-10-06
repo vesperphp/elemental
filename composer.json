@@ -1,0 +1,12 @@
+{
+  "name": "vesperphp/elemental",
+  "type": "project",
+  "description": "Vesper PHP, build fast.",
+  "keywords": ["framework", "vesperphp"],
+  "license": "MIT",
+  
+  "require": {
+        
+    }
+  
+}
