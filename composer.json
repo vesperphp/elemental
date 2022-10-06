@@ -8,6 +8,7 @@
   "require": {
     "vesperphp/frontier": "0.*",
     "vesperphp/sequel": "0.*",
+    "vesperphp/logger": "0.*",
     "vesperphp/foundry": "0.*",
     "vesperphp/vault": "0.*"
   }
