@@ -43,7 +43,7 @@ class Log {
          * filename, directory and the full path.
          */
         
-        $dir = ROOTPATH."/Logs/";
+        $dir = ROOTPATH.Config::get("logger/store");
         $filename = date("Ymd").'_'.$sev.'.log';
         $filestring = $dir.$filename;
 

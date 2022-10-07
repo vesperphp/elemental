@@ -4,6 +4,20 @@ namespace Elemental\Route;
 
 class Request{
 
+    public static function type(){
+
+        if(!empty($_POST)){
+            return ['type'=>'POST', 'body'=>$_GET['path'], 'post'=> $_POST];
+        }
+
+        if(!empty($_GET)){
+            return ['type'=>'GET', 'body'=>addslashes($_GET['path']), 'post'=>[]];
+        }
+
+        return false;
+
+    }
+
     public static function get(){
 
         if(!empty($_GET)){

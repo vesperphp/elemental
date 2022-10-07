@@ -16,7 +16,9 @@ class Elemental{
 
     public static function paint(){
         
-        Route::paint();
+        $r = new Route();
+        $r->paint();
+        $r->close();
 
         /**
          * After this is loaded
