@@ -5,6 +5,13 @@
   "keywords": ["framework", "vesperphp"],
   "license": "MIT",
   
+   "authors": [
+      {
+          "name": "Rik Janssen",
+          "email": "rik@vesperphp.com"
+      }
+  ],
+  
   "require": {
     "vesperphp/frontier": "0.*",
     "vesperphp/sequel": "0.*",
