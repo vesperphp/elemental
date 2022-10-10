@@ -1,6 +1,6 @@
 <?php
 
-namespace Elemental\Vault;
+namespace Elemental;
 
 use Elemental\Re;
 use Elemental\Log;
