@@ -93,7 +93,7 @@ class Api{
 
         if($path==NULL){
             
-            Frontier::error(404);
+            echo { "error": "404" }
         
         }
 
@@ -133,12 +133,16 @@ class Api{
             }
 
             $method = $path['method'];
-            $a = $paint->$method();
+            $a['body'] = $paint->$method();
           
             if(!is_array($a)){
+                
               echo { "error": "no valid array supplied" }
+                
             }else{
+                
               echo json_encode($a);  
+                
             }
 
         }else{
