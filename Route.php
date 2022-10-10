@@ -94,7 +94,7 @@ class Route{
         if($path==NULL){
             
             Frontier::error(404);
-        
+            exit;
         }
 
         /**

@@ -16,8 +16,7 @@ class Elemental{
 
     public static function paint(){
         
-        
-        if(substr($_GET['path'],0,3)=='api'){
+        if(Api::is()){
             
             /**
              * Define if we are working with an
@@ -39,6 +38,12 @@ class Elemental{
          * After this is loaded
          * nothing else will run.
          */
+    }
+
+    public static function foundry(){
+
+        //exec("npm run build");
+        exec("composer update");
 
     }
 

@@ -43,7 +43,7 @@ class Log {
          * filename, directory and the full path.
          */
         
-        $dir = ROOTPATH.Config::get("logger/store");
+        $dir = ROOTPATH."/".Config::get("logger/store")."/";
         $filename = date("Ymd").'_'.$sev.'.log';
         $filestring = $dir.$filename;
 
@@ -56,7 +56,6 @@ class Log {
             mkdir($dir, 0755, true);
 
         }
-        
         /**
          * Does the file already exist?
          * If it does not, create it.
@@ -167,7 +166,6 @@ class Log {
              */
             
             fclose($newFile);
-
         }
 
     }

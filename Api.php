@@ -20,6 +20,40 @@ class Api{
         
     }
 
+    /**
+     * Is the API being
+     * called or just a regular
+     * page?
+     */
+
+    public static function is(){
+
+        /**
+         * Is the path
+         * set?
+         */
+
+        if(!isset($_GET['path'])){
+            return false;
+        }
+        
+        /**
+         * Dissect the 
+         * path.
+         */
+
+        $p = explode('/', $_GET['path']);
+        if($p[0]=='api'){ return true; }
+
+        /**
+         * If the first item
+         * is not 'api' then
+         * return false.
+         */
+
+        return false;
+
+    }
 
     /**
      * HTTP Requests: Get
@@ -84,7 +118,6 @@ class Api{
          */
 
         $path = $this->prepare();
- 
         /**
          * Verify if the page actually exists
          * within the set of routes. If not, 
@@ -93,7 +126,8 @@ class Api{
 
         if($path==NULL){
             
-            echo { "error": "404" }
+            echo '{ "error": "404" }';
+            exit;
         
         }
 
@@ -115,7 +149,7 @@ class Api{
          * the controller and method.
          */
         
-        if(class_exists($path['controller'])){
+        if($path != NULL && class_exists($path['controller'])){
             
 
             header("HTTP/1.0 200 OK");
@@ -137,7 +171,7 @@ class Api{
           
             if(!is_array($a)){
                 
-              echo { "error": "no valid array supplied" }
+              echo '{ "error": "no valid array supplied" }';
                 
             }else{
                 
@@ -147,7 +181,7 @@ class Api{
 
         }else{
             
-            echo { "error": "404" }
+            //echo '{ "error": "404" }';
 
         }
                 
@@ -172,8 +206,7 @@ class Api{
 
         // Exception 1:
         // If the path array is empty, then return the '/' homepage controller
-
-        if(empty($path)){ return $routes['/']; }
+        if(isset($path[0]) && $path[0]=='api'){ return $routes['/']; }
 
         // Else, continue...
 
@@ -247,7 +280,7 @@ class Api{
          * return a null value.
          */
 
-        if(!isset($all[$raw])){ return NULL; }
+         if(!isset($all[$raw])){ return NULL; }
 
         /**
          * Define and
@@ -261,6 +294,8 @@ class Api{
             'vars' => $all[$raw]['vars']
             ]
         );
+        
+        
         return $all[$raw];
 
         
@@ -306,7 +341,7 @@ class Api{
             if($policy==false){
 
                 Log::to(['Shield has dodged an arrow.'],'shield');
-                echo { "error": "path not valid" }
+                echo '{ "error": "path not valid" }';
 
             }
 
@@ -314,8 +349,8 @@ class Api{
         }else{
 
             
-            Log::to(['This Shield class does not exist.' => $controller],'shield');
-            echo { "error": "404" }
+            Log::to(['This Shield class does not exist. (api)' => $controller],'shield');
+            echo '{ "error": "404" }';
 
             
 
@@ -331,7 +366,7 @@ class Api{
     public function error($code=404){
 
 
-        echo { "error": "404" }
+        echo '{ "error": "404" }';
         Log::to(['Error' => $code],'frontier');
 
     }
@@ -351,7 +386,7 @@ class Api{
 
         Hook::clear();
 
-        Log::to(['user_ip'=>$_SERVER['REMOTE_ADDR'], 'user_agent' => $_SERVER['HTTP_USER_AGENT']],'visits');
+        Log::to(['user_ip'=>$_SERVER['REMOTE_ADDR'], 'user_agent' => $_SERVER['HTTP_USER_AGENT']],'api');
         //Speed::log();
         
      }
