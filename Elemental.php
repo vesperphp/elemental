@@ -16,10 +16,25 @@ class Elemental{
 
     public static function paint(){
         
-        $r = new Route();
-        $r->paint();
-        $r->close();
+        
+        if(substr($_GET['path'],0,3)=='api'){
+            
+            /**
+             * Define if we are working with an
+             * API or with a regular route.
+             */
+            
+            $r = new Api();
+            $r->paint();
+            $r->close();
+            
+        }else{
+            
+            $r = new Route();
+            $r->paint();
+            $r->close();
 
+        }
         /**
          * After this is loaded
          * nothing else will run.
