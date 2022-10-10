@@ -16,7 +16,7 @@ class Api{
     public function __construct(){
         
         $this->request = Request::type();
-        $this->routes = $_SESSION["V_ROUTE"];
+        $this->routes = $_SESSION["V_API"];
         
     }
 
