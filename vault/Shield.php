@@ -5,7 +5,7 @@ namespace Elemental\Vault;
 use Elemental\Re;
 use Elemental\Log;
 
-class Shield{
+class Vault{
 
   
   /**
