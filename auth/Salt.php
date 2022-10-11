@@ -11,7 +11,7 @@ class Salt{
          * the config salt in the mix
          */
 
-        public static function salt(int $length=20) {
+        public static function shake(int $length=20) {
 
                 $string = substr(str_shuffle(MD5(Config::get('vault/salt').microtime())), 0, $length);
 

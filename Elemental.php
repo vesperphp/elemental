@@ -2,6 +2,9 @@
 
 namespace Elemental;
 
+use Elemental\Api;
+use Elemental\Route;
+use Foundry\Foundry;
 use Frontier\Service\Hook;
 
 /**
@@ -45,10 +48,12 @@ class Elemental{
          */
     }
 
-    public static function foundry(){
+    public static function foundry($argv){
 
         //exec("npm run build");
-        exec("composer update");
+        //exec("composer update");
+
+        Foundry::paint($argv);
 
     }
 

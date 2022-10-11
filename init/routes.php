@@ -2,6 +2,7 @@
 
 use Elemental\Route;
 use Elemental\Vault;
+use Elemental\Fault\Error;
 
 /**
  * The routes for the mandatory

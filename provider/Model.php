@@ -7,6 +7,7 @@ use Elemental\Vault\Cross;
 use Elemental\Route\Request;
 
 
+
 class Model{
 
 
@@ -47,7 +48,7 @@ class Model{
          * Cross site request forgery 
          * is triggered by POST
          */ 
-
+        
         if(!empty(Request::post()) && !Cross::path()){
 
             /**
