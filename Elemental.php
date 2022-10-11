@@ -2,6 +2,8 @@
 
 namespace Elemental;
 
+use Frontier\Service\Hook;
+
 /**
  * Vesper PHP framework.
  */
@@ -15,7 +17,7 @@ class Elemental{
      */
 
     public static function paint(){
-        
+
         if(Api::is()){
             
             /**
@@ -34,6 +36,9 @@ class Elemental{
             $r->close();
 
         }
+
+        Hook::clear();
+        
         /**
          * After this is loaded
          * nothing else will run.
