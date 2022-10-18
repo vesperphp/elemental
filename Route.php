@@ -136,7 +136,6 @@ class Route{
             $paint->$method();
 
         }else{
-            
             Frontier::error(404);
 
         }
