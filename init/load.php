@@ -6,6 +6,7 @@
  */
 
 require_once ROOTPATH.'/vendor/vesperphp/elemental/init/routes.php';
+require_once ROOTPATH.'/vendor/vesperphp/elemental/init/hooks.php';
 
 /**
  * Helper & service 
@@ -13,3 +14,6 @@ require_once ROOTPATH.'/vendor/vesperphp/elemental/init/routes.php';
  */
 
 foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/service/functions/*.php") as $filename){ require_once $filename; }
+foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/formality/functions/*.php") as $filename){ require_once $filename; }
+foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/formality/functions/forms/*.php") as $filename){ require_once $filename; }
+foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/formality/functions/columns/*.php") as $filename){ require_once $filename; }

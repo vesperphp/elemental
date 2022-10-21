@@ -13,10 +13,7 @@
   ],
   
   "require": {
-    "vesperphp/frontier": "*",
-    "vesperphp/sequel": "*",
-    "vesperphp/interact": "*",
-    "vesperphp/foundry": "*"
+
   }
   
 }
