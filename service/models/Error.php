@@ -1,6 +1,6 @@
 <?php
 
-namespace Elemental\Fault;
+namespace Elemental;
 
 use Elemental\Log;
 use Elemental\Model;
