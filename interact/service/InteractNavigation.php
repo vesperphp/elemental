@@ -12,6 +12,7 @@ class InteractNavigation{
         <p class="menu-label">General</p>
         <ul class="menu-list">
             <li><a href="<?php echo Config::get('site/uri'); ?>/admin/">Dashboard</a></li>
+            <li><a href="<?php echo Config::get('site/uri'); ?>/admin/pages/">Pages</a></li>
         </ul>
         <?php
 

@@ -8,7 +8,6 @@ class DashboardController{
 
     public function index(){
 
-        
         Frontier::view('admin/dashboard.html');
 
     }

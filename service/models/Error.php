@@ -28,7 +28,6 @@ class Error extends Model{
      */
     
     if(!in_array($code, $errors)){ $code = 404; }
-    
     Frontier::view('error/'.$code.'.html');
     Log::to(['Error' => $code],'frontier');
     

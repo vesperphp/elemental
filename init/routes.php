@@ -3,6 +3,10 @@
 use Elemental\Route;
 use Elemental\Vault;
 use Elemental\Fault\Error;
+use Interact\Dash\RolesController;
+use Interact\Dash\TeamsController;
+use Interact\Dash\UsersController;
+use Interact\Dash\DashboardController;
 
 /**
  * The routes for the mandatory
