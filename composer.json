@@ -15,7 +15,7 @@
   "require": {
     "rik-janssen/config": "0.*",
     "rik-janssen/sequel": "0.*",
-    "Cart-Rd/logger": "0.*"
+    "cart-rd/logger": "0.*"
   }
   
 }
