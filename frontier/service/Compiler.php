@@ -2,7 +2,7 @@
 
 namespace Frontier\Service;
 
-use Elemental\Config;
+use Config\Config;
 use Frontier\Frontier;
 
 /**
