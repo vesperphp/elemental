@@ -24,7 +24,7 @@ class FoundryTablier{
 
         echo "\n\e[33mSystem:\n\e[39m";
 
-        foreach ( glob(ROOTPATH."/vendor/vesperphp/sequel/tablier/tables/*.php") as $filename) { 
+        foreach ( glob(ROOTPATH."/vendor/vesperphp/sequel/tables/*.php") as $filename) { 
             include $filename; 
         }
 
