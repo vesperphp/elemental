@@ -3,6 +3,7 @@
 namespace Elemental;
 
 use Elemental\Api;
+use Frontier\Style;
 use Elemental\Route;
 use Foundry\Foundry;
 use Frontier\Service\Hook;
@@ -34,6 +35,17 @@ class Elemental{
             
         }else{
             
+            /**
+             * Build the assets.
+             */
+
+            Style::css();
+            Style::js();
+
+            /**
+             * Fetch route info.
+             */
+            
             $r = new Route();
             $r->paint();
             $r->close();
@@ -53,6 +65,7 @@ class Elemental{
         //exec("npm run build");
         //exec("composer update");
 
+        
         Foundry::paint($argv);
 
     }

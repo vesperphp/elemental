@@ -1,8 +1,7 @@
 <?php
 
-use App\Assets\Assets;
 use Frontier\Service\Hook;
-use App\Controllers\HomeController;
+use Interact\InteractAssets;
 use Interact\Service\InteractNavigation;
 
 /**
@@ -14,19 +13,19 @@ use Interact\Service\InteractNavigation;
  * Admin panel header
  */ 
 
-Hook::asset('admin_head', 'AssetFilterAdminHead', [Assets::class,'head']);
+Hook::asset('admin_head', 'AssetFilterAdminHead', [InteractAssets::class,'head']);
 
 /**
  * Admin panel body
  */
 
-Hook::asset('admin_body', 'AssetFilterAdminBody', [Assets::class,'body']);
+Hook::asset('admin_body', 'AssetFilterAdminBody', [InteractAssets::class,'body']);
 
 /**
  * Admin panel footer
  */
 
-Hook::asset('admin_foot', 'AssetFilterAdminFoot', [Assets::class,'foot']);
+Hook::asset('admin_foot', 'AssetFilterAdminFoot', [InteractAssets::class,'foot']);
 
 /**
  * Admin panel navigation
