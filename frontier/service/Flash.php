@@ -2,8 +2,8 @@
 
 namespace Frontier\Service;
 
-use Elemental\Config;
-use Elemental\Log;
+use Config\Config;
+use Logger\Log;
 
 
 /**
