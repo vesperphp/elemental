@@ -13,7 +13,9 @@
   ],
   
   "require": {
-
+    "rik-janssen/config": "0.*",
+    "rik-janssen/sequel": "0.*",
+    "cartrd/logger": "0.*"
   }
   
 }
