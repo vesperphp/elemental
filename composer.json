@@ -15,6 +15,8 @@
   "require": {
     "rik-janssen/config": "0.*",
     "rik-janssen/sequel": "0.*",
+    "rik-janssen/formality": "0.*",
+    "rik-janssen/frontier": "0.*",
     "cart-rd/interact": "0.*",
     "cart-rd/logger": "0.*"
   }
