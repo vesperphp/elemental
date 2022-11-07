@@ -27,7 +27,7 @@ class Style{
 
         if(Config::get('production') == FALSE 
         OR !file_exists(ROOTPATH.'/httpdocs/css/vesper.css') 
-        OR !file_exists(ROOTPATH.'/httpdocs/css/vesper.css')
+        OR !file_exists(ROOTPATH.'/httpdocs/css/interact.css')
         ){
 
             $compiler = new Compiler();
