@@ -2,7 +2,7 @@
 
 namespace Interact;
 
-use Elemental\Config;
+use Config\Config;
 
 
 class InteractAssets{

@@ -1,6 +1,6 @@
 <?php
 
-use Elemental\Route;
+use Route\Route;
 use Elemental\Vault;
 use Elemental\Fault\Error;
 use Interact\Dash\RolesController;

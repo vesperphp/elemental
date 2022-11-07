@@ -4,7 +4,7 @@ namespace Interact\Dash;
 
 use Sequel\Sequel;
 use Elemental\Model;
-use Elemental\Config;
+use Config\Config;
 use Formality\Listify;
 use Formality\Formality;
 

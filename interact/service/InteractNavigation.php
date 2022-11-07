@@ -2,7 +2,7 @@
 
 namespace Interact\Service;
 
-use Elemental\Config;
+use Config\Config;
 
 class InteractNavigation{
 

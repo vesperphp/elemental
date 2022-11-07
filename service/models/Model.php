@@ -3,7 +3,7 @@
 namespace Elemental;
 
 use Elemental\Re;
-use Elemental\Route\Request;
+use Route\Request;
 use Formality\Service\Cross;
 
 
