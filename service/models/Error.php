@@ -2,7 +2,7 @@
 
 namespace Elemental;
 
-use Elemental\Log;
+use Logger\Log;
 use Elemental\Model;
 use Frontier\Frontier;
 

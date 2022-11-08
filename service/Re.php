@@ -3,7 +3,7 @@
 namespace Elemental;
 
 use Frontier\Frontier;
-use Elemental\Config;
+use Config\Config;
 
 
 class Re{
