@@ -2,7 +2,8 @@
 
 namespace Elemental\Auth;
 
-use Elemental\Config;
+use Config\Config;
+
 
 class Salt{
 

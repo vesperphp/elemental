@@ -6,6 +6,7 @@ use Route\Route;
 use Elemental\Api;
 use Frontier\Style;
 use Foundry\Foundry;
+use Sequel\Check\Check;
 use Frontier\Service\Hook;
 
 
@@ -22,6 +23,8 @@ class Elemental{
      */
 
     public static function paint(){
+
+        Elemental::spin();
 
         if(Api::is()){
             
@@ -68,6 +71,47 @@ class Elemental{
 
         
         Foundry::paint($argv);
+
+    }
+
+    /**
+     * This is the checker function
+     * that knows when to shut down the 
+     * site, or let it spin.
+     */
+
+    public static function spin(){
+
+
+        /**
+         * When needed files are not available
+        */
+
+        $files = [
+            "Config" => "init/config",
+            "Routes" => "init/routes",
+            "Api" => "init/api",
+            "Globals" => "init/globals",
+            "Hooks" => "init/hooks"
+        ];
+
+        foreach($files as $name => $file){
+            if(!file_exists(ROOTPATH."/".$file.".php")){
+                die($name." file not availabe.");
+            }
+        }
+
+        /**
+         * When DB is not available...
+         */
+
+        $sequel = new Check;
+
+        if(!$sequel->db()){
+            die("Database not availabe.");
+        }
+
+
 
     }
 
