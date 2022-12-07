@@ -114,11 +114,11 @@ class Tools{
         $string = str_replace("{%name%}", "`".$f->name."` ", $string);
         $string = str_replace("{%type%}", strtoupper($a['type']), $string);
         $string = str_replace("{%length%}", $a['length'], $string);
-        $string = str_replace("{%null%}", $f->null, $string);
-        $string = str_replace("{%default%}", $f->default, $string);
-        $string = str_replace("{%update%}", $f->onupdate, $string);
-        $string = str_replace("{%unique%}", $f->unique, $string);
-        $string = str_replace("{%increment%}", $f->increment, $string);
+        $string = str_replace("{%null%}", $f->null ?? '', $string);
+        $string = str_replace("{%default%}", $f->default ?? '', $string);
+        $string = str_replace("{%update%}", $f->onupdate ?? '', $string);
+        $string = str_replace("{%unique%}", $f->unique ?? '', $string);
+        $string = str_replace("{%increment%}", $f->increment ?? '', $string);
 
         /**
          * Clean up 

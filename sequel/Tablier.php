@@ -62,6 +62,8 @@ class Tablier extends Columns{
 
             $this->display(true);
 
+            $this->sysEntry();
+
         }else{
 
             $this->display(false);
@@ -69,6 +71,18 @@ class Tablier extends Columns{
         }
   
     }
+
+    /**
+     * Record the table being 
+     * created in the sys table
+     */
+
+     public function sysEntry(){
+
+        $name = $this->table;
+        Sequel::insert('_sys_tables')->set("name", $name)->do();
+
+     }
 
     /**
      * Some messaging.

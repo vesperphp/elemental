@@ -13,7 +13,6 @@ require_once ROOTPATH.'/vendor/vesperphp/elemental/init/hooks.php';
  * functions.
  */
 
-foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/service/functions/*.php") as $filename){ require_once $filename; }
 foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/functions/*.php") as $filename){ require_once $filename; }
 foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/functions/forms/*.php") as $filename){ require_once $filename; }
 foreach (glob(ROOTPATH."/vendor/vesperphp/elemental/functions/columns/*.php") as $filename){ require_once $filename; }

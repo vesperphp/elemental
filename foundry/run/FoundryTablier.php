@@ -24,7 +24,7 @@ class FoundryTablier{
 
         echo "\n\e[33mSystem:\n\e[39m";
 
-        foreach ( glob(ROOTPATH."/vendor/vesperphp/sequel/tables/*.php") as $filename) { 
+        foreach ( glob(ROOTPATH."/vendor/vesperphp/elemental/init/tables/*.php") as $filename) { 
             include $filename; 
         }
 
@@ -89,7 +89,7 @@ class FoundryTablier{
 
     public function fill(){
 
-        require_once ROOTPATH."/vendor/vesperphp/elemental/service/functions/slug.php";
+        require_once ROOTPATH."/vendor/vesperphp/elemental/functions/slug.php";
         /**
          * The CLI helper to build
          * the database based on the
