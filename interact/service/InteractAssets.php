@@ -29,7 +29,8 @@ class InteractAssets{
 
   public function foot(){
 
-    //echo '<script src="'.Config::get('site/uri').'/js/vesper.js"></script>';
+    echo '<script src="'.Config::get('site/uri').'/js/vesper.js"></script>';
+
     
   }
 

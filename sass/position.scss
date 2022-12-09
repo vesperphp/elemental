@@ -30,8 +30,10 @@
 .position-bottom-xl{ bottom: $mar-pad-xl; }
 
 @for $index-count from 1 through 10 {
+
     $height-index: 10 * $index-count;
     .index-#{$index-count} { 
         z-index: $height-index;
         }
+        
 }

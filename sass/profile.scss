@@ -1,0 +1,30 @@
+.profile-box{
+    display: flex;
+}
+
+.profile-name{
+
+    li.username{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    li.modify{
+        font-weight: lighter;
+    }
+
+}
+
+
+.profile-picture{
+    
+    width: 35px;
+    height: 35px;
+
+    img{
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+    }
+
+}
