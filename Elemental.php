@@ -2,6 +2,7 @@
 
 namespace Elemental;
 
+use Elemental\Error;
 use Route\Route;
 use Elemental\Api;
 use Frontier\Style;
@@ -25,7 +26,6 @@ class Elemental{
     public static function paint(){
 
         Elemental::spin();
-
         if(Api::is()){
             
             /**

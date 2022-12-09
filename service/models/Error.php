@@ -32,5 +32,6 @@ class Error extends Model{
     Log::to(['Error' => $code],'frontier');
     
   }
+
   
 }
