@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+.fixed{ position: fixed; }
+.absolute{ position: absolute; }
+.relative{ position: relative; }
+.sticky{ position: sticky; }
+
+.position-left{ left: 0; }
+.position-left-s{ left: $mar-pad-s; }
+.position-left-m{ left: $mar-pad-m; }
+.position-left-l{ left: $mar-pad-l; }
+.position-left-xl{ left: $mar-pad-xl; }
+
+.position-right{ right: 0; }
+.position-right-s{ right: $mar-pad-s; }
+.position-right-m{ right: $mar-pad-m; }
+.position-right-l{ right: $mar-pad-l; }
+.position-right-xl{ right: $mar-pad-xl; }
+
+.position-top{ top: 0; }
+.position-top-s{ top: $mar-pad-s; }
+.position-top-m{ top: $mar-pad-m; }
+.position-top-l{ top: $mar-pad-l; }
+.position-top-xl{ top: $mar-pad-xl; }
+
+.position-bottom{ bottom: 0; }
+.position-bottom-s{ bottom: $mar-pad-s; }
+.position-bottom-m{ bottom: $mar-pad-m; }
+.position-bottom-l{ bottom: $mar-pad-l; }
+.position-bottom-xl{ bottom: $mar-pad-xl; }
+
+@for $index-count from 1 through 10 {
+    $height-index: 10 * $index-count;
+    .index-#{$index-count} { 
+        z-index: $height-index;
+        }
+}

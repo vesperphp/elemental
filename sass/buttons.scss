@@ -3,26 +3,24 @@
 .button:hover{ background-color: $secondary; }
 
 .button{
-
     display: inline-block;
     border-radius: $radius;
     padding: $mar-pad-s $mar-pad-m;
     background-color: $primary;
     font-size: $fontSize;
     color: $white;
-
-    .fullwidth{ display: block; }
-
-    .primary-hover:hover{ background-color: $primary; }
-    .secondary-hover:hover{ background-color: $secondary; }
-    .dark-hover:hover{ background-color: $dark; }
-    .light-hover:hover{ background-color: $light; }
-    .danger-hover:hover{ background-color: $danger; }
-    .warning-hover:hover{ background-color: $warning; }
-    .success-hover:hover{ background-color: $success; }
-    .info-hover:hover{ background-color: $info; }
-
 }
+
+.button.fullwidth{ display: block; }
+
+.button.primary-hover:hover{ background-color: $primary; }
+.button.secondary-hover:hover{ background-color: $secondary; }
+.button.dark-hover:hover{ background-color: $dark; }
+.button.light-hover:hover{ background-color: $light; }
+.button.danger-hover:hover{ background-color: $danger; }
+.button.warning-hover:hover{ background-color: $warning; }
+.button.success-hover:hover{ background-color: $success; }
+.button.info-hover:hover{ background-color: $info; }
 
 a:hover{ color: $linkHover; }
 
