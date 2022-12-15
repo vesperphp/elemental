@@ -1,0 +1,72 @@
+@import "variables.scss";
+
+/* x, y, z */
+
+.m-auto { margin: 0 auto; }
+
+.m-0 { margin: 0; }
+.m-x-0 { margin-right: 0; margin-left: 0; }
+.m-y-0 { margin-top: 0; margin-bottom: 0; }
+.m-t-0 { margin-top: 0; }
+.m-b-0 { margin-bottom: 0; }
+.m-l-0 { margin-left: 0; }
+.m-r-0 { margin-right: 0; }
+
+.p-0 { padding: 0; }
+.p-x-0 { padding-right: 0; padding-left: 0; }
+.p-y-0 { padding-top: 0; padding-bottom: 0; }
+.p-t-0 { padding-top: 0; }
+.p-b-0 { padding-bottom: 0; }
+.p-l-0 { padding-left: 0; }
+.p-r-0 { padding-right: 0; }
+
+$positions: "absolute", "relative", "sticky", "fixed";
+
+@each $name in $positions {
+
+    .#{$name} { position: #{$name}; }
+    
+}
+
+.pos-t { top: 0; }
+.pos-l { left: 0; }
+.pos-r { right: 0; }
+.pos-b { bottom: 0; }
+
+.pos-t-auto { top: auto; }
+.pos-l-auto { left: auto; }
+.pos-r-auto { right: auto; }
+.pos-b-auto { bottom: auto; }
+
+.z-0{ z-index: 0; }
+
+$base: $ratio;
+@for $increment from 1 through $exponent {
+
+    .m-#{$increment} { margin: #{$base}px; }
+    .m-x-#{$increment} { margin-right: #{$base}px; margin-left: #{$base}px; }
+    .m-y-#{$increment} { margin-top: #{$base}px; margin-bottom: #{$base}px; }
+    .m-t-#{$increment} { margin-top: #{$base}px; }
+    .m-b-#{$increment} { margin-bottom: #{$base}px; }
+    .m-l-#{$increment} { margin-left: #{$base}px; }
+    .m-r-#{$increment} { margin-right: #{$base}px; }
+
+    .p-#{$increment} { padding: #{$base}px; }
+    .p-x-#{$increment} { padding-right: #{$base}px; padding-left: #{$base}px; }
+    .p-y-#{$increment} { padding-top: #{$base}px; padding-bottom: #{$base}px; }
+    .p-t-#{$increment} { padding-top: #{$base}px; }
+    .p-b-#{$increment} { padding-bottom: #{$base}px; }
+    .p-l-#{$increment} { padding-left: #{$base}px; }
+    .p-r-#{$increment} { padding-right: #{$base}px; }
+
+    .pos-t-#{$increment} { top: #{$base}px; }
+    .pos-l-#{$increment} { left: #{$base}px; }
+    .pos-r-#{$increment} { right: #{$base}px; }
+    .pos-b-#{$increment} { bottom: #{$base}px; }
+    
+    .z-#{$increment} { z-index: #{$base * 10}; }
+    .zm-#{$increment} { z-index: -#{$base * 10}; }
+    $base: $base*2;
+        
+}
+

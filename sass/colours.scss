@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+/* colours */
+
+$colours: 
+"primary" $primary,
+"secondary" $secondary,
+"dark" $dark,
+"light" $light,
+"black" $black,
+"white" $white,
+"danger" $danger,
+"warning" $warning,
+"success" $success,
+"info" $info;
+
+@each $name, $hex in $colours {
+
+    .#{$name} {
+        background-color: $hex;
+        color: scale-color($hex, $lightness: -90%);
+    }
+
+    .#{$name}-l {
+        background-color: scale-color($hex, $lightness: +50%);
+        color: scale-color($hex, $lightness: -50%);
+    }
+
+    .#{$name}-d {
+        background-color: scale-color($hex, $lightness: -50%);
+        color: scale-color($hex, $lightness: +50%);
+    }
+
+    .text-#{$name} { color: $hex; }
+
+    .link-#{$name} a, a.link-#{$name} { color: $hex; }
+
+    .link-#{$name} a:hover, a.link-#{$name}:hover { color: scale-color($hex, $lightness: -90%); }
+
+}

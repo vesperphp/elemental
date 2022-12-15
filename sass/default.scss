@@ -1,0 +1,49 @@
+@import "variables.scss";
+
+/* default values */
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    background-color: transparent; 
+    font-size: $fontSize; 
+    font-family: $fontFamily; 
+    line-height: $lineHeight; 
+    font-weight: normal; 
+}
+
+$base: 2;
+
+@for $increment from 5 through 1 {
+
+    h#{$increment} { 
+        font-family: $headerFamily;
+        font-size: #{$fontSize + $base}; 
+        line-height: $lineHeight;   
+    }
+
+    $base: $base * 2;
+        
+}
+
+p{
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $dark;
+}
+
+a{
+    text-decoration: $textDecoration;
+}
+
+button{
+    background-color: $primary;
+}
+
+.light{ font-weight: lighter; }
+.normal{ font-weight: normal; }
+.bold{ font-weight: bold; }
+.italic{ font-style: italic; }
+.underline{ text-decoration: underline; }
