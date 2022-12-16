@@ -2,12 +2,71 @@
 
 /* breakpoints */
 
-@each $name, $size in $breakpoints {
+$prev: 0px;
+@each $name, $size, $wrapper, $modify in $breakpoints {
 
-@media only screen and (max-width: #{$size}) {
-    .wrapper{
-        margin: 0 auto;  
+    @media only screen and (min-width: #{$prev}) and (max-width: #{$size}) {
+
+        /* wrapper */
+
+        .wrapper{
+            margin: 0 auto;  
+            max-width: #{$wrapper};
+        }
+
+        /* text */
+
+        $base: 1.1;
+
+        @for $increment from 5 through 1 {
+        
+            h#{$increment} { 
+                font-size: #{$base * $modify}em; 
+            }
+        
+            $base: $base * 1.3;
+                
+        }
+        
+        p{
+            font-size: #{$modify}em;
+        }
+
+        /* margins */
+
+        $base: $ratio * $modify;
+        @for $increment from 1 through $exponent {
+
+            .m-#{$increment} { margin: #{$base}px; }
+            .m-x-#{$increment} { margin-right: #{$base}px; margin-left: #{$base}px; }
+            .m-y-#{$increment} { margin-top: #{$base}px; margin-bottom: #{$base}px; }
+            .m-t-#{$increment} { margin-top: #{$base}px; }
+            .m-b-#{$increment} { margin-bottom: #{$base}px; }
+            .m-l-#{$increment} { margin-left: #{$base}px; }
+            .m-r-#{$increment} { margin-right: #{$base}px; }
+
+            .p-#{$increment} { padding: #{$base}px; }
+            .p-x-#{$increment} { padding-right: #{$base}px; padding-left: #{$base}px; }
+            .p-y-#{$increment} { padding-top: #{$base}px; padding-bottom: #{$base}px; }
+            .p-t-#{$increment} { padding-top: #{$base}px; }
+            .p-b-#{$increment} { padding-bottom: #{$base}px; }
+            .p-l-#{$increment} { padding-left: #{$base}px; }
+            .p-r-#{$increment} { padding-right: #{$base}px; }
+
+            .pos-t-#{$increment} { top: #{$base}px; }
+            .pos-l-#{$increment} { left: #{$base}px; }
+            .pos-r-#{$increment} { right: #{$base}px; }
+            .pos-b-#{$increment} { bottom: #{$base}px; }
+            
+            $base: $base*2;
+                
+        }
+
+
+
+
     }
-}
+
+    $prev: $size;
 
 }

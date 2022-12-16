@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+/* buttons */
+
+button, .button{
+    background-color: $primary;
+    padding: #{$ratio * 1} #{$ratio * 2};
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    border-radius: $radius;
+}
+
+button.fullwidth, .button{ display: block; }
+
+@each $name, $code in $icons {
+
+    button.icon-#{$name}, .button.icon-#{$name}{
+        padding-left: #{$fontSize + ($ratio * 2)};
+        text-align: left;
+    }
+
+    button.icon-#{$name}:before, .button.icon-#{$name}:before { 
+        content: #{$code}; 
+        position: absolute;
+        top: #{$ratio * 1};
+        left: #{$ratio * 2};
+        width: 1.4em;
+        height: 1.4em;
+        font-family: $iconFont;
+        font-size: 1em;
+    }
+    
+}

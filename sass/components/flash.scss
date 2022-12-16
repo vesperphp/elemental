@@ -1,0 +1,43 @@
+@import "variables.scss";
+
+/* flash messages */
+
+@each $name, $hex in $colours {
+
+    .flash-#{$name} {
+        background-color: scale-color($hex, $lightness: +30%);
+        color: scale-color($hex, $lightness: -30%);
+        border: 1px solid $hex;
+        border-radius: $radius;
+        position: relative;
+        display: block;
+        padding: #{$ratio * 2} #{$ratio * 4};
+        margin: 0 0 #{$ratio * 2} 0;
+    }
+
+    .flash-#{$name} p{
+        color: scale-color($hex, $lightness: -30%);
+    }
+
+    @each $icon, $code in $icons {
+
+        .flash-#{$name}.icon-#{$icon}{
+            padding-left: #{$fontSize + ($ratio * 2)};
+            text-align: left;
+        }
+    
+        .flash-#{$name}.icon-#{$icon}:before { 
+            content: #{$code}; 
+            position: absolute;
+            top: #{$ratio * 2};
+            left: #{$ratio * 4};
+            width: 1.4em;
+            height: 1.4em;
+            font-family: $iconFont;
+            font-size: 1em;
+            color: scale-color($hex, $lightness: -30%);
+        }
+        
+    }
+
+}

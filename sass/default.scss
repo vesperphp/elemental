@@ -11,35 +11,28 @@
     font-family: $fontFamily; 
     line-height: $lineHeight; 
     font-weight: normal; 
+    box-sizing: border-box;
 }
 
-$base: 2;
+/* text */
 
 @for $increment from 5 through 1 {
 
     h#{$increment} { 
         font-family: $headerFamily;
-        font-size: #{$fontSize + $base}; 
         line-height: $lineHeight;   
     }
-
-    $base: $base * 2;
         
 }
 
 p{
     font-family: $fontFamily;
-    font-size: $fontSize;
     line-height: $lineHeight;
     color: $dark;
 }
 
 a{
     text-decoration: $textDecoration;
-}
-
-button{
-    background-color: $primary;
 }
 
 .light{ font-weight: lighter; }

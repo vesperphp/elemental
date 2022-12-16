@@ -42,28 +42,7 @@ $positions: "absolute", "relative", "sticky", "fixed";
 
 $base: $ratio;
 @for $increment from 1 through $exponent {
-
-    .m-#{$increment} { margin: #{$base}px; }
-    .m-x-#{$increment} { margin-right: #{$base}px; margin-left: #{$base}px; }
-    .m-y-#{$increment} { margin-top: #{$base}px; margin-bottom: #{$base}px; }
-    .m-t-#{$increment} { margin-top: #{$base}px; }
-    .m-b-#{$increment} { margin-bottom: #{$base}px; }
-    .m-l-#{$increment} { margin-left: #{$base}px; }
-    .m-r-#{$increment} { margin-right: #{$base}px; }
-
-    .p-#{$increment} { padding: #{$base}px; }
-    .p-x-#{$increment} { padding-right: #{$base}px; padding-left: #{$base}px; }
-    .p-y-#{$increment} { padding-top: #{$base}px; padding-bottom: #{$base}px; }
-    .p-t-#{$increment} { padding-top: #{$base}px; }
-    .p-b-#{$increment} { padding-bottom: #{$base}px; }
-    .p-l-#{$increment} { padding-left: #{$base}px; }
-    .p-r-#{$increment} { padding-right: #{$base}px; }
-
-    .pos-t-#{$increment} { top: #{$base}px; }
-    .pos-l-#{$increment} { left: #{$base}px; }
-    .pos-r-#{$increment} { right: #{$base}px; }
-    .pos-b-#{$increment} { bottom: #{$base}px; }
-    
+   
     .z-#{$increment} { z-index: #{$base * 10}; }
     .zm-#{$increment} { z-index: -#{$base * 10}; }
     $base: $base*2;
